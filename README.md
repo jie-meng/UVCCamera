@@ -165,3 +165,30 @@ Add new sample app `usbCameraTest8` to show how to set/get uvc control like brig
 ### 2017/04/17
 Add new sample app on [OpenCVwithUVC](https://github.com/saki4510t/OpenCVwithUVC.git) repository.
 This shows the way to pass video images from UVC into `cv::Mat` (after optional applying video effect by OpenGL|ES) and execute image processing by `OpenCV`.
+
+How to use from jitpack
+=========
+
+1. Add the JitPack repository to your build file
+    - gradle
+
+        Add it in your root build.gradle at the end of repositories:
+
+        ```
+        allprojects {
+            repositories {
+                ...
+                maven { url 'http://raw.github.com/saki4510t/libcommon/master/repository/' }
+                maven { url 'https://jitpack.io' }
+            }
+        }
+        ```
+
+2. Add the dependency
+    - gradle
+
+        ```
+        dependencies {
+            implementation 'com.github.jie-meng.UVCCamera:libuvccamera:v1.0.3'
+        }
+        ```
